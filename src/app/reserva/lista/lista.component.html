@@ -1,1 +1,27 @@
-<p>lista works!</p>
+<!-- Header móvil -->
+<div class="hdr">
+  <button class="icon-btn" (click)="back()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <h3>Reservas</h3>
+  <button class="icon-btn" aria-label="Buscar">
+    <mat-icon>search</mat-icon>
+  </button>
+</div>
+
+<h4 class="sec">Mis reservas</h4>
+
+<!-- Tarjetas de reserva -->
+<div class="cards">
+  <mat-card class="card" *ngFor="let r of reservas" (click)="goDetalle(r.id)">
+    <img [src]="r.img" alt="{{r.nombre}}" class="thumb" loading="lazy" />
+    <div class="info">
+      <strong class="title">{{ r.nombre }}</strong>
+      <span class="sub">{{ r.ciudad }}</span>
+    </div>
+
+    <span class="estado" [attr.data-state]="r.estado">{{ r.estado }}</span>
+
+    <mat-icon class="arrow">chevron_right</mat-icon>
+  </mat-card>
+</div>

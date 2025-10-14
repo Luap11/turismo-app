@@ -1,0 +1,105 @@
+/* Contenedor */
+:host {
+  display: block;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 12px 16px 20px;
+}
+
+/* Header móvil */
+.hdr {
+  display: grid;
+  grid-template-columns: 36px 1fr 36px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+
+  h3 {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display: grid; place-items: center;
+  cursor: pointer;
+
+  mat-icon { opacity: .85; }
+}
+
+.sec {
+  margin: 8px 0 10px;
+  color: #666;
+  font-weight: 600;
+}
+
+/* Lista de tarjetas */
+.cards {
+  display: grid;
+  gap: 10px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 72px 1fr auto 20px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  cursor: pointer;
+
+  /* suaviza la apariencia Material */
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+}
+
+.thumb {
+  width: 72px;
+  height: 54px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.info {
+  display: grid;
+  gap: 4px;
+
+  .title {
+    font-weight: 700;
+  }
+
+  .sub {
+    color: #6b7280;   /* texto secundario */
+    font-size: 13px;
+  }
+}
+
+/* Chip de estado (custom) */
+.estado {
+  justify-self: end;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+/* Colores de estado */
+.estado[data-state="Calificado"] { background: #e8f5e9; color: #2e7d32; border-color: #d1ecd3; }
+.estado[data-state="Completado"] { background: #e3f2fd; color: #1565c0; border-color: #cfe4fb; }
+.estado[data-state="Confirmado"] { background: #e8f0fe; color: #1a73e8; border-color: #d9e2fd; }
+.estado[data-state="Pendiente"]  { background: #fff3e0; color: #ef6c00; border-color: #ffe0b2; }
+.estado[data-state="Cancelado"]  { background: #ffebee; color: #c62828; border-color: #ffcdd2; }
+
+.arrow {
+  opacity: .5;
+}
+
+/* Responsive muy angosto */
+@media (max-width: 360px) {
+  .card { grid-template-columns: 64px 1fr auto 20px; }
+  .thumb { width: 64px; height: 48px; }
+}

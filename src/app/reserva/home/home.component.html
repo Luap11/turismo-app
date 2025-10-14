@@ -1,1 +1,56 @@
-<p>home works!</p>
+<mat-toolbar color="primary" class="ps-toolbar justify-content-center">
+  <span>Dashboard</span>
+</mat-toolbar>
+
+<section class="wrap">
+  <!-- KPIs -->
+  <div class="kpis">
+    <mat-card class="kpi">
+      <div class="kpi-title">Mis reservas</div>
+      <div class="kpi-value">{{ kpi.reservas }}</div>
+    </mat-card>
+
+    <mat-card class="kpi">
+      <div class="kpi-title">Ingresos</div>
+      <div class="kpi-value">{{ kpi.ingresos }}</div>
+    </mat-card>
+  </div>
+
+  <!-- Mis tours -->
+  <div class="section-header">
+    <h2>Mis tours</h2>
+    <button mat-button color="accent" (click)="goLista()">
+      Ver más
+    </button>
+  </div>
+
+  <div class="tour-list">
+    <mat-card class="tour-item" *ngFor="let t of tours" (click)="goLista()">
+      <div class="tour-icon">
+        <mat-icon>map</mat-icon>
+      </div>
+      <div class="tour-info">
+        <strong>{{ t.nombre }}</strong>
+        <div class="sub">{{ t.sub }}</div>
+      </div>
+      <div class="tour-arrow">
+        <mat-icon>chevron_right</mat-icon>
+      </div>
+    </mat-card>
+  </div>
+
+  <!-- CTA crear nuevo -->
+  <mat-card class="cta">
+    <div class="cta-content">
+<div class="cta-text">
+      <h3>Crear nuevo tour</h3>
+      <p>Agrega un nuevo tour para publicarlo y gestionarlo desde la app.</p>
+    </div>
+    <div class="cta-image">
+        <img src="./assets/img/palmera.jpg" alt="palmera" class="cta-img">
+    </div>
+    </div>
+    
+    <button mat-raised-button color="primary">Crear</button>
+  </mat-card>
+</section>

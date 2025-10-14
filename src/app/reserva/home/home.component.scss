@@ -1,0 +1,146 @@
+/* Contenedor general */
+.wrap {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Toolbar fija para móvil */
+.ps-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #8B5E3C !important;
+  color: #fff !important;
+}
+
+/* KPIs */
+.kpis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 12px 0 20px;
+}
+
+.kpi {
+  border-radius: 14px;
+  padding: 12px;
+  background: #F3EBDD; /* arena */
+  border: 1px solid #E7DAC8;
+  border-radius: 16px;
+  box-shadow: none;
+}
+
+.kpi-title {
+  color: #483688; /* purpura */
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.kpi-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+
+/* Sección "Mis tours" */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6px 0 10px;
+
+  h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+}
+
+.tour-list {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tour-item {
+  display: grid;
+  grid-template-columns: 36px 1fr 20px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  .tour-icon mat-icon {
+    opacity: 0.8;
+  }
+
+  .tour-info .sub {
+    color: #6b7280; /* texto secundario */
+    margin-top: 2px;
+    font-size: 13px;
+  }
+
+  .tour-arrow mat-icon {
+    opacity: 0.5;
+  }
+}
+
+/* CTA crear nuevo */
+.cta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 16px;
+
+  .cta-content{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .cta-text {
+    flex: 1;
+    min-width: 0; /* Evita overflow en flex */
+    h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+    p {
+      margin: 0;
+      color: #444;
+      line-height: 1.4;
+    }
+  }
+
+  .cta-image {
+    flex: 1; /* Ocupa 50% del espacio disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    .cta-img {
+      width: 100%;
+      min-width: 0px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+
+  button {
+    width: max-content;
+    background: #8B5E3C; /* dorado calido */
+    border-radius: 16px;
+    align-self: flex-start;
+  }
+}
+
+/* Ajustes responsive mínimos */
+@media (max-width: 360px) {
+  .kpis {
+    grid-template-columns: 1fr;
+  }
+}
