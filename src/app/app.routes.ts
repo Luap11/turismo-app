@@ -9,5 +9,8 @@ export const routes: Routes = [
   },{
     path:'login',
     component: LoginComponent
+  },{
+    path:'reserva',
+    loadChildren: () => import('./reserva/reserva.module').then(m => m.ReservaModule)
   }
 ]

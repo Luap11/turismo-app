@@ -1,0 +1,76 @@
+@use '@angular/material' as mat;
+
+// Paleta PRIMARY (café)
+$ps-primary-palette: (
+  50: #f3e8e1,
+  100: #e2cdb8,
+  200: #d0b18d,
+  300: #bd9461,
+  400: #b08343,
+  500: #8B5E3C,  // tono base
+  600: #7e5537,
+  700: #6f4a30,
+  800: #5f3f29,
+  900: #4b301f,
+  contrast: (
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);
+
+// Paleta ACCENT (dorado cálido)
+$ps-accent-palette: (
+  50: #fff7e6,
+  100: #ffe7b3,
+  200: #ffd580,
+  300: #ffc24d,
+  400: #ffb833,
+  500: #F5A623,  // tono base
+  600: #e0951f,
+  700: #c6821b,
+  800: #a96d16,
+  900: #7c4e0f,
+  contrast: (
+    500: #1E1E1E,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);
+
+// Paleta WARN (rojo suave)
+$ps-warn-palette: mat.define-palette(mat.$red-palette, 600);
+
+
+// Crear las paletas Material
+$ps-primary: mat.define-palette($ps-primary-palette, 500);
+$ps-accent: mat.define-palette($ps-accent-palette, 500);
+$ps-warn: mat.define-palette($ps-warn-palette, 600);
+
+// Crear el tema claro (Light Theme)
+$ps-theme: mat.define-light-theme((
+  color: (
+    primary: $ps-primary,
+    accent: $ps-accent,
+    warn: $ps-warn,
+  ),
+  typography: mat.define-typography-config(
+    $font-family: 'Inter, Roboto, sans-serif'
+  ),
+  density: 0,
+));
+
+
+// Aplicar tema a todos los componentes Angular Material
+@include mat.all-component-themes($ps-theme);
+
+// Fondo general (arena)
+body {
+  background-color: #F5EFE9;
+  color: #1E1E1E;
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
