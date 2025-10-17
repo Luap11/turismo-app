@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { CommonModule } from "@angular/common";
 import { MatCard } from "@angular/material/card";
 import { MatIcon } from "@angular/material/icon";
+import { ReservaService } from '../reserva.service';
 
 type ReservaItem = {
   id: number;
@@ -19,16 +20,10 @@ type ReservaItem = {
   templateUrl: './lista.component.html',
   styleUrl: './lista.component.scss'
 })
-export class ListaComponent {
-  reservas: ReservaItem[] = [
-    { id: 201, nombre: 'Satipo Tour', ciudad: 'Junín',     estado: 'Calificado', img: 'assets/img/satipo.jpg' },
-    { id: 202, nombre: 'Huancaya Paradise', ciudad: 'Lima', estado: 'Completado', img: 'assets/img/huancaya.jpg' },
-    { id: 203, nombre: 'Machu Picchu Aventura', ciudad: 'Cusco', estado: 'Confirmado', img: 'assets/img/macchu.jpg' },
-    { id: 204, nombre: 'Cañón del Colca Trek', ciudad: 'Arequipa', estado: 'Pendiente', img: 'assets/img/colca.jpg' },
-    { id: 205, nombre: 'Selva Expedition', ciudad: 'Amazonas', estado: 'Cancelado', img: 'assets/img/selva.jpg' },
-  ];
 
-  constructor(private router: Router) {}
+export class ListaComponent {
+   reservas = this.reserva.getAll();
+   constructor(private router: Router, private reserva: ReservaService) {}
 
   back(): void {
     this.router.navigate(['/reserva/home']);

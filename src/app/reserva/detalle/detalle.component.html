@@ -1,1 +1,46 @@
-<p>detalle works!</p>
+<!-- Header simple -->
+<div class="hdr">
+  <button class="icon-btn" (click)="back()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <h3>Detalle</h3>
+  <span class="spacer"></span>
+</div>
+
+<!-- Imagen hero -->
+<div class="hero">
+  <img [src]="tour?.img" [alt]="tour?.nombre" loading="lazy" />
+</div>
+
+<!-- Hoja de detalles -->
+<mat-card class="sheet">
+  <div class="head">
+    <div class="title">
+      <h2>{{ tour?.nombre }}</h2>
+      <div class="meta">{{ tour?.ciudad }}</div>
+      <div class="stars" aria-label="Puntuación">
+        <mat-icon *ngFor="let s of stars(5)">
+          {{ s <= (tour?.rating || 0) ? 'grade' : 'star_border' }}
+        </mat-icon>
+      </div>
+    </div>
+
+    <div class="price">
+      <div class="amount">S/ {{ tour?.precio }}</div>
+      <small>por persona</small>
+    </div>
+  </div>
+
+  <div class="tags">
+    <span class="chip" *ngFor="let t of tour?.tags">{{ t }}</span>
+  </div>
+
+  <div class="actions">
+    <button mat-raised-button color="accent" (click)="toOpiniones()">
+      Opiniones
+    </button>
+    <button mat-stroked-button color="primary" (click)="back()">
+      Volver
+    </button>
+  </div>
+</mat-card>

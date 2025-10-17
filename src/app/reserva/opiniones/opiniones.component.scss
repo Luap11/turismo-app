@@ -1,0 +1,86 @@
+:host {
+  display: block;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 12px 16px 24px;
+}
+
+/* Header */
+.hdr {
+  display: grid;
+  grid-template-columns: 36px 1fr 24px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+
+  h3 { margin: 0; text-align: center; }
+  .spacer { width: 24px; }
+}
+.icon-btn {
+  background: transparent; border: none;
+  width: 36px; height: 36px; border-radius: 10px;
+  display: grid; place-items: center; cursor: pointer;
+  mat-icon { opacity: .85; }
+}
+
+/* Panel promedio */
+.score {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  padding: 0 2px 6px;
+  margin-bottom: 8px;
+
+  .left h1 { margin: 0; font-size: 40px; line-height: 1; }
+  .left p { margin: 2px 0 0; color: #6b7280; }
+
+  .stars mat-icon { color: #F5A623; font-variation-settings: 'FILL' 1; }
+}
+
+.bars { display: grid; gap: 6px; align-content: start; }
+.bar {
+  display: grid;
+  grid-template-columns: 20px 1fr 38px;
+  align-items: center;
+  gap: 8px;
+
+  .line {
+    height: 8px; background: #eee; border-radius: 6px; overflow: hidden;
+    i { display: block; height: 100%; background: #8B5E3C; } /* café */
+  }
+}
+
+/* Tabs / nav */
+.tabs {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 0 10px;
+}
+.tab {
+  border: none; background: #8B5E3C; color: #fff;
+  padding: 8px 12px; border-radius: 10px; font-weight: 600;
+}
+.link {
+  color: #8B5E3C; text-decoration: none; font-weight: 600; cursor: pointer;
+}
+
+/* Lista de comentarios */
+.list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.item {
+  background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 12px;
+  .head { display: flex; gap: 10px; align-items: center; }
+  .head small { color: #6b7280; }
+  .head .stars mat-icon { color: #F5A623; font-size: 18px; }
+  p { margin: 8px 0 0; color: #444; }
+}
+
+/* CTA inferior */
+.cta {
+  margin-top: 16px;
+  display: flex; justify-content: center;
+  button { text-transform: none; border-radius: 10px; }
+}
+
+/* Angosto */
+@media (max-width: 360px) {
+  .score { grid-template-columns: 100px 1fr; }
+}

@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},               //SF-01
   {path: 'lista', component: ListaComponent},             //SF-02
   {path: 'detalle/:id', component: DetalleComponent},     //SF-03
-  {path: 'opiniones', component: OpinionesComponent},     //SF-04
+  {path: 'opiniones/:id', component: OpinionesComponent}, //SF-04
   {path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];
 

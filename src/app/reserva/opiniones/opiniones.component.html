@@ -1,1 +1,56 @@
-<p>opiniones works!</p>
+<!-- Header -->
+<div class="hdr">
+  <button class="icon-btn" (click)="back()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <h3>Opiniones</h3>
+  <span class="spacer"></span>
+</div>
+
+<!-- Panel de score -->
+<section class="score">
+  <div class="left">
+    <h1>{{ data.promedio }}</h1>
+    <div class="stars" aria-label="promedio">
+      <mat-icon *ngFor="let s of stars(5)">
+        {{ s <= Math.round(data.promedio || 0) ? 'grade' : 'star_border' }}
+      </mat-icon>
+    </div>
+    <p>{{ data.total }} opiniones</p>
+  </div>
+
+  <div class="bars">
+    <div class="bar" *ngFor="let s of [5,4,3,2,1]">
+      <span>{{ s }}</span>
+      <div class="line"><i [style.width.%]="pct($any(s))"></i></div>
+      <small>{{ pct($any(s)) }}%</small>
+    </div>
+  </div>
+</section>
+
+<!-- Tabs simples -->
+<nav class="tabs">
+  <button class="tab active">Opiniones ({{ data.total }})</button>
+  <a class="link" (click)="back()">Ver todos</a>
+</nav>
+
+<!-- Lista de comentarios -->
+<ul class="list">
+  <li class="item" *ngFor="let r of data.items">
+    <div class="head">
+      <strong>{{ r.user }}</strong>
+      <small>{{ r.fecha }}</small>
+      <span class="stars">
+        <mat-icon *ngFor="let s of stars(5)">
+          {{ s <= r.rating ? 'grade' : 'star_border' }}
+        </mat-icon>
+      </span>
+    </div>
+    <p>{{ r.texto }} <a href="#">Leer más</a></p>
+  </li>
+</ul>
+
+<!-- CTA inferior -->
+<footer class="cta">
+  <button mat-raised-button color="accent" (click)="back()">Explorar más reservas</button>
+</footer>
