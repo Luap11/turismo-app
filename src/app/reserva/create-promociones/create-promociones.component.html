@@ -1,0 +1,63 @@
+<div class="create-promotion-container">
+  <!-- Header -->
+  <div class="header">
+    <div class="header-back">
+      <span class="back-icon" [routerLink]="['/reserva/promociones']">←</span>
+    </div>
+    <h1 class="header-title">Crear nueva promoción</h1>
+    <div class="header-spacer"></div>
+  </div>
+
+  <!-- Formulario -->
+  <form class="promotion-form">
+    <!-- Nombre de la promoción -->
+    <div class="form-group">
+      <label for="name">Nombre de la promoción</label>
+      <input type="text" id="name" placeholder="Ingresa el nombre de la promoción" class="form-input">
+    </div>
+
+    <!-- Descripción -->
+    <div class="form-group">
+      <label for="description">Descripción</label>
+      <textarea id="description" placeholder="Describe en qué aplica" class="form-textarea"></textarea>
+    </div>
+
+    <!-- Tour aplicable -->
+    <div class="form-group">
+      <label for="tour">Tour aplicable</label>
+      <select id="tour" class="form-select">
+        <option value="" disabled selected>Selecciona un tour</option>
+        <option value="machu">Machu Picchu Aventura</option>
+        <option value="colca">Cañon del Colca Trek</option>
+        <option value="selva">Selva Expedition</option>
+      </select>
+    </div>
+
+    <!-- Descuento (%) -->
+    <div class="form-group">
+      <label for="discount">Descuento (%)</label>
+      <input type="number" id="discount" placeholder="Ingresa el % de descuento" class="form-input">
+    </div>
+
+    <!-- Incluye fotos -->
+    <div class="form-group">
+      <label for="photos">Incluye fotos</label>
+      <div class="photo-dropzone">
+        <p>Aarrastrar y soltar aquí las fotos</p>
+        <span class="photo-icon">📷</span>
+      </div>
+    </div>
+
+    <!-- Disponibilidad -->
+    <div class="form-group">
+      <label for="dates">Disponibilidad</label>
+      <div class="date-picker">
+        <input type="text" id="dates" placeholder="Selecciona fechas disponibles" class="form-input">
+        <span class="calendar-icon">📅</span>
+      </div>
+    </div>
+
+    <!-- Botón Crear promoción -->
+    <button class="create-button" [routerLink]="['/reserva/promociones']">Crear promoción</button>
+  </form>
+</div>

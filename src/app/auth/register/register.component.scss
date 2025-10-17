@@ -1,0 +1,57 @@
+$primary-color: #8B5E3C;
+$secondary-color: #D0761C;
+$input-bg: #f8eae0;
+
+.register-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.secondary-color{
+    color: $secondary-color;
+}
+
+.register-card {
+    max-width: 380px;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.text-logo {
+    font-size: 1rem;
+    color: $primary-color;
+}
+
+.text-form{
+    color: $primary-color;
+}
+
+.form-control {
+    background-color: $input-bg;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+}
+
+.btn-primary {
+    background-color: $primary-color;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    font-weight: 500;
+}
+
+.login-link {
+    font-size: 0.9rem;
+    color: #808080;
+}

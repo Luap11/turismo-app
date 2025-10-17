@@ -1,0 +1,35 @@
+
+<div class="d-flex align-items-center justify-content-center vh-100 bg-white">
+  <div class="register-card text-center">
+
+    <div class="logo mb-4">
+      <img src="assets/img/logo.png" alt="" width="80">
+      <h6 class="text-logo mt-2 fw-bold">
+        Paraísos <span class="secondary-color fw-normal">Secretos</span>
+      </h6>
+    </div>
+
+    <h2 class="text-form fw-bold">¡Bienvenido!</h2>
+    <p class="text-secondary mb-2 fw-bold">Por favor ingresa tus cuenta aquí</p>
+
+    <div class="mt-4">
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Correo electrónico" formControlName="correo">
+      </div>
+      <div class="mb-3 position-relative">
+        <input type="password" class="form-control" placeholder="Contraseña" formControlName="password">
+      </div>
+
+      <p class="">¿Olvidaste contraseña?</p>
+
+      <button [routerLink]="['/reserva']" class="btn btn-primary w-100 mt-4">
+        Ingresar
+      </button>
+    </div>
+
+    <div class="login-link mt-3 fw-bolder d-flex justify-content-around">
+      ¿Todavía no tienes cuenta?
+      <p class="secondary-color" [routerLink]="['/home/register']">Registrate</p>
+    </div>
+  </div>
+</div>

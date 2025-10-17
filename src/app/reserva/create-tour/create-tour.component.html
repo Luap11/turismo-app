@@ -1,0 +1,138 @@
+<header class="app-bar container container-narrow">
+    <div class="d-flex align-items-center gap-2">
+      <button type="button" class="icon-btn" routerLink="['/reserva/tour-list']">
+        <i class="bi bi-arrow-left"></i>
+      </button>
+      <h1 class="app-title m-0">Crear nuevo tour</h1>
+    </div>
+  </header>
+
+  <main class="container container-narrow pb-5">
+    <div class="needs-validation">
+
+      <!-- Nombre -->
+      <div class="mb-3">
+        <label class="label-soft">Nombre del tour</label>
+        <input type="text" class="form-control field-soft" placeholder="Ingresa el nombre del tour" required>
+        <div class="invalid-feedback">Ingresa el nombre del tour.</div>
+      </div>
+
+      <!-- Descripción -->
+      <div class="mb-3">
+        <label class="label-soft">Descripción</label>
+        <textarea class="form-control field-soft" placeholder="Describe la experiencia única que ofrece este tour" required></textarea>
+        <div class="invalid-feedback">Agrega una descripción.</div>
+      </div>
+
+      <!-- Itinerario -->
+      <div class="mb-3">
+        <label class="label-soft">Itinerario</label>
+        <textarea class="form-control field-soft" placeholder="Día 1:
+Día 2:"></textarea>
+      </div>
+
+      <!-- Incluye / No incluye -->
+      <div class="mb-3">
+        <label class="label-soft">Incluye</label>
+        <input type="text" class="form-control field-soft" placeholder="Ingresa todo lo que incluye el tour">
+      </div>
+      <div class="mb-3">
+        <label class="label-soft">No incluye</label>
+        <input type="text" class="form-control field-soft" placeholder="Ingresa  todo lo que no  incluye el tour">
+      </div>
+
+      <!-- Categorías -->
+      <div class="mb-3">
+        <label class="label-soft">Categorías</label>
+        <div class="position-relative">
+          <select class="form-select field-soft pe-5" multiple required>
+            <option>Aventura</option>
+            <option>Naturaleza</option>
+            <option>Cultural</option>
+            <option>Gastronomía</option>
+            <option>Playa</option>
+            <option>City Tour</option>
+            <option>Trekking</option>
+          </select>
+          <i class="bi bi-chevron-down select-caret"></i>
+        </div>
+        <div class="small text-muted mt-1">Selecciona una o más categorías</div>
+      </div>
+
+      <!-- Fotos -->
+      <div class="mb-3">
+        <label class="label-soft d-block">Incluye fotos</label>
+
+        <!-- input real -->
+        <input id="inputFotos" type="file" accept="image/*" multiple class="d-none">
+
+        <!-- zona arrastrar + botón Examinar -->
+        <div id="dropzone" class="dropzone-soft d-flex flex-column flex-sm-row align-items-center justify-content-between gap-2">
+          <div class="text-muted">
+            Arrastrar y soltar aquí las fotos
+            <i class="bi bi-camera ms-1"></i>
+          </div>
+          <button type="button" id="btnExaminar" class="btn btn-outline-secondary btn-sm rounded-3">
+            <i class="bi bi-folder2-open me-1"></i> Examinar
+          </button>
+        </div>
+
+        <!-- vista previa -->
+        <div id="preview" class="row g-2 mt-2"></div>
+      </div>
+
+      <!-- Precio -->
+      <div class="mb-1">
+        <label class="label-soft d-block">Precio</label>
+      </div>
+      <div class="row g-3">
+        <div class="col-6">
+          <div class="small text-muted mb-1">Adulto</div>
+          <div class="input-group">
+            <span class="input-group-text field-soft">S/</span>
+            <input type="number" step="0.01" min="0" class="form-control field-soft" value="0.00" required>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="small text-muted mb-1">Niños</div>
+          <div class="input-group">
+            <span class="input-group-text field-soft">S/</span>
+            <input type="number" step="0.01" min="0" class="form-control field-soft" value="0.00" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cantidad mínima -->
+      <div class="mt-3 mb-3">
+        <label class="label-soft">Cantidad mínima</label>
+        <input type="number" min="0" class="form-control field-soft" value="0" required>
+      </div>
+
+      <!-- Disponibilidad: calendarios Inicio / Fin -->
+      <div class="mb-4">
+        <label class="label-soft d-block">Disponibilidad</label>
+        <div class="row g-2">
+          <div class="col-6">
+            <div class="position-relative">
+              <input type="date" class="form-control field-soft pe-5" required>
+              <i class="bi bi-calendar3 input-trailing"></i>
+            </div>
+            <div class="small text-muted mt-1">Inicio</div>
+          </div>
+          <div class="col-6">
+            <div class="position-relative">
+              <input type="date" class="form-control field-soft pe-5" required>
+              <i class="bi bi-calendar3 input-trailing"></i>
+            </div>
+            <div class="small text-muted mt-1">Fin</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón -->
+      <div class="d-grid" [routerLink]="['/reserva/tour-list']">
+        <button class="btn btn-brand" >Crear tour</button>
+      </div>
+
+    </div>
+  </main>

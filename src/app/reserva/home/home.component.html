@@ -5,7 +5,7 @@
 <section class="wrap">
   <!-- KPIs -->
   <div class="kpis">
-    <mat-card class="kpi">
+    <mat-card class="kpi" (click)="goLista()">
       <div class="kpi-title">Mis reservas</div>
       <div class="kpi-value">{{ kpi.reservas }}</div>
     </mat-card>
@@ -19,13 +19,13 @@
   <!-- Mis tours -->
   <div class="section-header">
     <h2>Mis tours</h2>
-    <button mat-button color="accent" (click)="goLista()">
+    <button mat-button color="accent" [routerLink]="['/reserva/tour-list']">
       Ver más
     </button>
   </div>
 
-  <div class="tour-list">
-    <mat-card class="tour-item" *ngFor="let t of tours" (click)="goLista()">
+  <div class="tour-list" >
+    <mat-card class="tour-item" *ngFor="let t of tours" >
       <div class="tour-icon">
         <mat-icon>map</mat-icon>
       </div>
@@ -51,6 +51,12 @@
     </div>
     </div>
     
-    <button mat-raised-button color="primary">Crear</button>
+    <button mat-raised-button color="primary" [routerLink]="['/reserva/create-tour']">Crear</button>
   </mat-card>
 </section>
+<nav class="bottom-nav d-flex justify-content-around align-items-center py-2 mt-4 shadow-sm bg-white rounded-top">
+    <i class="bi bi-house-door-fill text-brown fs-5" [routerLink]="['/reserva/home']"></i>
+    <i class="bi bi-ticket-perforated fs-5" [routerLink]="['/reserva/tour-list']"></i>
+    <i class="bi bi-heart text-muted fs-5" [routerLink]="['/reserva/promociones']"></i>
+    <i class="bi bi-person text-muted fs-5"></i>
+  </nav>

@@ -1,0 +1,84 @@
+<div class="tour-container">
+  <!-- Header con imagen y título -->
+  <div class="header">
+    <div class="header-back" [routerLink]="['reserva/tour-list']">
+      <span class="back-icon">←</span>
+    </div>
+    <h1 class="header-title">Detalle del tour</h1>
+    <div class="header-spacer"></div>
+  </div>
+
+  <!-- Imagen principal -->
+  <img src="assets/img/machu-hero.jpeg" alt="Machu Picchu" class="hero-image">
+
+  <!-- Información del tour -->
+  <div class="tour-info">
+    <h2>Machu Picchu Aventura</h2>
+    <p class="location">Cusco</p>
+    <div class="price-section">
+      <span class="price">S/ 550</span>
+      <span class="price-per">por persona</span>
+    </div>
+    <div class="tag">Aventura</div>
+  </div>
+
+  <!-- Sección Resumen -->
+  <div class="section">
+    <h3 class="section-title">Resumen</h3>
+    <p>Vive la magia del Cusco y la ciudadela inca de Machu Picchu en una aventura de 3 días. Recorre calles coloniales, viaja en tren panorámico por el Valle Sagrado y descubre, junto a un guía experto, los mejores miradores y templos del santuario. Ideal para quienes buscan una experiencia corta, bien organizada y con tiempo suficiente para disfrutar sin prisas.</p>
+  </div>
+
+  <!-- Sección Incluye -->
+  <div class="section">
+    <h3 class="section-title">Incluye</h3>
+    <ul>
+      <li>Traslados aeropuerto-hotel-aeropuerto</li>
+      <li>Boleto de tren panorámico</li>
+      <li>Entrada a Machu Picchu</li>
+      <li>Guía profesional bilingüe</li>
+    </ul>
+  </div>
+
+  <!-- Sección No incluye -->
+  <div class="section">
+    <h3 class="section-title">No incluye</h3>
+    <ul>
+      <li>Vuelos internacionales</li>
+      <li>Comidas y bebidas no especificadas</li>
+    </ul>
+  </div>
+
+  <!-- Sección Itinerario -->
+  <div class="section">
+    <h3 class="section-title">Itinerario</h3>
+
+    <div class="itinerary-day">
+      <h4>Día 1: Cusco - Bienvenida & City Highlights</h4>
+      <p>Recepción en el aeropuerto y traslado al hotel. Mañana libre para aclimatación. Por la tarde, caminata suave por el Centro Histórico: Plaza de Armas, Qoricancha (exterior), y mirador de San Blas. Briefing del guía para el día siguiente. Pernocte en Cusco.</p>
+    </div>
+
+    <div class="itinerary-day">
+      <h4>Día 2: Cusco - Valle Sagrado - Aguas Calientes</h4>
+      <p>Desayuno. Traslado a la estación y viaje en tren panorámico bordeando el río Vilcanota. Llegada a Aguas Calientes y ascenso en bus a Machu Picchu para el tour guiado (aprox. 2h30). Tiempo libre para fotos. Descenso al pueblo, tarde libre para termas o mercado de artesanías. Pernocte en Aguas Calientes.</p>
+    </div>
+
+    <div class="itinerary-day">
+      <h4>Día 3: Machu Picchu (opcional amanecer) - Retorno a Cusco</h4>
+      <p>Opción temprana: ingreso adicional (sujeto a disponibilidad) o caminata corta a Puente Inca. Mañana libre. Tren de retorno y traslado al hotel o aeropuerto de Cusco según tu itinerario de vuelo.</p>
+    </div>
+  </div>
+
+<!-- Galería -->
+<section class="card-block">
+  <h3 class="pill">Galería</h3>
+  <div class="container">
+    <img src="assets/img/machu-1.jpeg" alt="Machu Picchu" class="col-4">
+    <img src="assets/img/machu-2.jpeg" alt="Terrazas" class="col-4">
+    <img src="assets/img/machu-3.jpeg" alt="Tren Panorámico" class="col-4">
+    <img src="assets/img/machu-4.jpeg" alt="Vista General" class="col-5">
+    <img src="assets/img/machu-5.jpeg" alt="Cusco Plaza" class="col-7">
+  </div>
+</section>
+
+<!-- Botón Editar -->
+<button class="edit-button" [routerLink]="['/reserva/edit-tour']">Editar</button>

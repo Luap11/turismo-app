@@ -1,0 +1,41 @@
+<div class="d-flex align-items-center justify-content-center vh-100 bg-white">
+  <div class="register-card text-center">
+
+    <div class="logo mb-4">
+      <img src="assets/img/logo.png" alt="" width="80">
+      <h6 class="text-logo mt-2 fw-bold">
+        Paraísos <span class="secondary-color fw-normal">Secretos</span>
+      </h6>
+    </div>
+
+    <h2 class="text-form fw-bold">Crear cuenta</h2>
+    <p class="text-secondary mb-2 fw-bold">Por favor ingresa tus datos aquí</p>
+
+    <form class="mt-4">
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Nombre de agencia" formControlName="nombreAgencia">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="RUC" formControlName="ruc">
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Correo electrónico" formControlName="correo">
+      </div>
+      <div class="mb-3">
+        <input type="tel" class="form-control" placeholder="Celular" formControlName="celular">
+      </div>
+      <div class="mb-3 position-relative">
+        <input type="password" class="form-control" placeholder="Contraseña" formControlName="password">
+      </div>
+
+      <button class="btn btn-primary w-100 mt-4" type="submit" [routerLink]="['/reserva']">
+        Crear cuenta
+      </button>
+    </form>
+
+    <div class="login-link mt-3 fw-bolder d-flex justify-content-around">
+      ¿Ya tienes cuenta?
+      <p class="secondary-color" [routerLink]="['/home/login']">Inicia sesión</p>
+    </div>
+  </div>
+</div>

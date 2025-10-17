@@ -1,0 +1,49 @@
+<div class="promotions-container">
+  <!-- Header -->
+  <div class="header" [routerLink]="['/reserva/home']">
+    <div class="header-back" >
+      <span class="back-icon">←</span>
+    </div>
+    <h1 class="header-title">Promociones</h1>
+    <div class="header-spacer"></div>
+  </div>
+
+  <!-- Título "Promociones activas" -->
+  <div class="section-title">Promociones activas</div>
+
+  <!-- Lista de promociones -->
+  <div class="promotions-list">
+    <!-- Promoción 1 -->
+    <div class="promotion-card">
+      <img src="assets/img/machu-5.jpeg" alt="Aventura en la Selva" class="promotion-image">
+      <div class="promotion-info">
+        <h3>Aventura en la Selva</h3>
+        <p class="discount">15% de descuento</p>
+      </div>
+      <span class="chevron">›</span>
+    </div>
+
+    <!-- Promoción 2 -->
+    <div class="promotion-card">
+      <img src="assets/img/machu-3.jpeg" alt="Cultura Viva" class="promotion-image">
+      <div class="promotion-info">
+        <h3>Cultura Viva</h3>
+        <p class="discount">20% de descuento</p>
+      </div>
+      <span class="chevron">›</span>
+    </div>
+
+    <!-- Promoción 3 -->
+    <div class="promotion-card">
+      <img src="assets/img/machu-1.jpeg" alt="Ica Extreme" class="promotion-image">
+      <div class="promotion-info">
+        <h3>Ica Extreme</h3>
+        <p class="discount">10% de descuento</p>
+      </div>
+      <span class="chevron">›</span>
+    </div>
+  </div>
+
+  <!-- Botón "+" -->
+  <button class="add-button" [routerLink]="['/reserva/create-promociones']">+</button>
+</div>

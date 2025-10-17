@@ -1,0 +1,169 @@
+:root{
+  --bg: #f7f7f7;
+  --card: #ffffff;
+  --label: #818181;
+  --input-bg: #efe7df;      /* beige de tu captura */
+  --input-border: #e5dcd3;
+  --text: #2b2b2b;
+  --brand: #8d533d;         /* botón marrón */
+  --radius: 14px;
+}
+
+html, body{ background: var(--bg); color: var(--text); }
+.container-narrow{ max-width: 420px; }
+
+/* app bar */
+.app-bar{ position: sticky; top: 0; z-index: 5; background: var(--bg); padding: .9rem 1rem .4rem; }
+.icon-btn{ width:36px; height:36px; border-radius:50%; border:1px solid #eee; background:#fff; display:inline-flex; align-items:center; justify-content:center; }
+.icon-btn i{ font-size: 1.1rem; }
+.app-title{ font-size: 1rem; font-weight: 700; }
+
+/* labels e inputs */
+.label-soft{ display:block; font-size:.9rem; color: var(--label); margin-bottom:.35rem; }
+.field-soft{
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius);
+  padding: .6rem .9rem;
+  font-size: .95rem;
+  box-shadow: none !important;
+}
+.field-soft:focus{
+  border-color:#d7c8bb !important;
+  box-shadow: 0 0 0 .15rem rgba(141,83,61,.10) !important;
+  outline: 0;
+}
+
+/* adornos en select e inputs calendario */
+.select-caret, .input-trailing{
+  position:absolute; right:12px; top:50%; transform:translateY(-50%);
+  color:#7b7b7b; pointer-events:none;
+}
+
+/* dropzone */
+.dropzone-soft{
+  background: var(--input-bg);
+  border: 1px dashed #d8cfc6;
+  color:#6b6b6b;
+  border-radius: var(--radius);
+  padding: 16px 12px;
+}
+.dropzone-soft.dragover{ background:#f1ece6; border-color:#c7b7a7; }
+
+/* miniaturas */
+.thumb{
+  width:100%; height:92px; object-fit:cover;
+  border-radius:12px; border:1px solid #e5e7eb;
+}
+
+/* botón principal */
+.btn-brand{
+  background: var(--brand); color:#fff; border-radius:14px;
+  padding:.7rem 1rem; font-weight:600; border:none;
+}
+.btn-brand:hover{ filter:brightness(.97); color:#fff; }
+
+/* input-group para S/ */
+.input-group-text.field-soft{
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-right: 0;
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+.input-group .form-control.field-soft{
+  border-left: 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+/* CSS PARA CREAR TOURS/ */
+/* === Galería de fotos (editar) === */
+.gallery{
+  display: grid;
+}
+.grid-3{ grid-template-columns: repeat(3, 1fr); }
+.gap-2{ gap: .5rem; }
+
+/* Las .thumb ya existen; se usan para las miniaturas */
+
+/* === Barra de navegación inferior === */
+.bottom-nav{
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  margin: 0 auto;
+  max-width: 480px;               /* encaja con container-narrow */
+  background: #ffffff;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  box-shadow: 0 -10px 20px rgba(0,0,0,.04);
+  padding: .6rem 1.2rem .7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom-nav .nav-item{
+  width: 56px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 12px;
+  color: #c1c1c1;                 /* desactivado */
+  text-decoration: none;
+  transition: .15s ease-in-out;
+}
+.bottom-nav .nav-item i{
+  font-size: 1.35rem;
+  line-height: 1;
+}
+.bottom-nav .nav-item.active{
+  color: var(--brand);            /* ícono activo en marrón */
+  background: rgba(141,83,61,.10);
+  border: 1px solid rgba(141,83,61,.25);
+}
+
+/* margen inferior del contenido para que no lo tape la barra */
+.mb-6{ margin-bottom: 5.5rem !important; }
+/* ==== Colores de marca en títulos ==== */
+.text-brand{ color: #5a3b2f; } /* tono marrón más oscuro para titulares */
+
+/* ==== Tarjetas de resumen ==== */
+.stat-card{
+  background: #efe7df;                 /* beige como tus inputs */
+  border: 1px solid #e5dcd3;
+  border-radius: 18px;
+  padding: 14px 12px;
+}
+.stat-sub{
+  color: #6b8797;                       /* azul gris tenue como en la imagen */
+  font-weight: 600;
+  font-size: .95rem;
+  margin-bottom: .15rem;
+}
+.stat-value{
+  color: #2c2c2c;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* ==== Link "Ver más" ==== */
+.link-more{
+  color: #cc7a2c;                       /* naranja suave */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .95rem;
+}
+.link-more:hover{ text-decoration: underline; }
+
+/* ==== Card "Nuevo Tour" ==== */
+.new-tour-card{
+  background: #efe7df;
+  border: 1px solid #e5dcd3;
+  border-radius: 18px;
+}
+.new-tour-sub{
+  color: #6b8797;
+  font-weight: 600;
+}
+.new-tour-img{
+  width: 86px;
+  height: 86px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}

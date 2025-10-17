@@ -1,0 +1,43 @@
+$primary-color: #8B5E3C;
+$secondary-color: #D0761C;
+
+.text-brown {
+  color: $primary-color;
+}
+
+.text-orange {
+  color: $secondary-color;
+}
+
+.summary-card {
+  background-color: var(--light-brown);
+  border-radius: 10px;
+}
+
+.new-tour-card {
+  background-color: var(--light-brown);
+}
+
+.btn-brown {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+}
+
+.btn-brown:hover {
+  background-color: #3e2c1e;
+}
+
+.tour-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.bottom-nav i {
+  cursor: pointer;
+}
+
+.bottom-nav i.active {
+  color: $primary-color;
+}

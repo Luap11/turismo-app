@@ -1,15 +1,19 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const routes: Routes = [
   {
     path:'',
-    redirectTo:'login',
+    redirectTo:'home',
     pathMatch:'full'
   },{
-    path:'login',
-    component: LoginComponent
+    path:'dashboard',
+    component: DashboardComponent
   },{
+    path:'home',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+  },
+  {
     path:'reserva',
     loadChildren: () => import('./reserva/reserva.module').then(m => m.ReservaModule)
   }

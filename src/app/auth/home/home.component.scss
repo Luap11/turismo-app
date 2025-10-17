@@ -1,0 +1,71 @@
+$primary-color: #8B5E3C;
+$secondary-color: #D0761C;
+$gray-border: #9b9b9b;
+
+.welcome-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.image-container {
+  position: relative;
+  margin-bottom: 1.2rem;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom-left-radius: 100% 15%;
+    border-top-left-radius: 100% 30%;
+    object-fit: cover;
+  }
+}
+
+// 📝 Títulos
+.title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: $secondary-color;
+  margin-bottom: 0.25rem;
+
+  .highlight {
+    color: $primary-color;
+  }
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1.8rem;
+
+  .text-accent {
+    color: $secondary-color;
+  }
+}
+
+.btn-brown {
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.btn-outline-dark {
+  border: 1.5px solid $gray-border;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.welcome-card {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}

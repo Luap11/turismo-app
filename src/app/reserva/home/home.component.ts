@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from "@angular/common";
 import { MatCard } from "@angular/material/card";
 import { MatButton } from "@angular/material/button";
@@ -11,7 +11,7 @@ type TourItem = { nombre: string, sub: string };
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,MatCard, MatIcon, MatToolbar, MatButton],
+  imports: [CommonModule, MatCard, MatIcon, MatToolbar, MatButton, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

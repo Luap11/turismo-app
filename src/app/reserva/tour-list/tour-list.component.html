@@ -1,0 +1,42 @@
+<div class="tours-container">
+  <div class="header" [routerLink]="['/reserva/home']">
+    <div class="header-back" >
+      <span class="back-icon">←</span>
+    </div>
+    <h1 class="header-title">Tours</h1> 
+    <div class="header-spacer"></div>
+  </div>
+
+  <div class="section-title">Mis tours</div>
+
+  <div class="tours-list">
+    <div class="tour-card">
+      <img src="assets/img/machu-hero.jpeg" alt="Machu Picchu" class="tour-image">
+      <div class="tour-info">
+        <h3>Machu Picchu Aventura</h3>
+        <p class="price">S/ 550 por persona</p>
+      </div>
+      <span class="chevron" [routerLink]="['/reserva/tour-detail']">›</span>
+    </div>
+
+    <div class="tour-card">
+      <img src="assets/img/machu-2.jpeg" alt="Cañon del Colca" class="tour-image">
+      <div class="tour-info">
+        <h3>Cañon del Colca Trek</h3>
+        <p class="price">S/ 200 por persona</p>
+      </div>
+      <span class="chevron">›</span>
+    </div>
+
+    <div class="tour-card">
+      <img src="assets/img/machu-4.jpeg" alt="Selva Expedition" class="tour-image">
+      <div class="tour-info">
+        <h3>Selva Expedition</h3>
+        <p class="price">S/ 300 por persona</p>
+      </div>
+      <span class="chevron">›</span>
+    </div>
+  </div>
+
+  <button class="add-button" [routerLink]="['/reserva/create-tour']">+</button>
+</div>

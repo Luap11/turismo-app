@@ -1,0 +1,113 @@
+.tours-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-icon {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6d4c41;
+  margin: 0;
+  text-align: center;
+  flex: 1;
+  margin-left: -24px;
+}
+
+.header-spacer {
+  width: 24px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  padding: 16px 20px;
+  margin: 0;
+}
+
+.tours-list {
+  padding: 0 20px;
+}
+
+.tour-card {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tour-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.tour-info {
+  flex: 1;
+}
+
+.tour-info h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 4px;
+  color: #333;
+}
+
+.price {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.chevron {
+  font-size: 20px;
+  color: #9e5f3a;
+}
+
+.add-button {
+  width: 60px;
+  height: 60px;
+  margin: 20px auto;
+  background-color: #9e5f3a;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-button:hover {
+  background-color: #8b5033;
+}
